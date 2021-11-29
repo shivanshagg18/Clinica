@@ -41,9 +41,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/freesurfer">FreeSurfer</a></li>
-        <li><a href="/rotate">Rotate</a></li>
+        <li class="active"><a href="/rotate">Rotate</a></li>
         <li><a href="/nifti">Nifti</a></li>
       </ul>
     </div>
@@ -51,30 +51,14 @@
 </nav>
 
 
-<form action="/convertor" method="post" enctype="multipart/form-data">
-    <select class="form-select" aria-label="Default select example" name="Type">
-        <option selected>Select Dataset</option>
-        <option value="ADNI">ADNI</option>
-        <option value="AIBL">AIBL</option>
-        <option value="NIFD">NIFD</option>
-        <option value="OASIS">OASIS</option>
-        <option value="OASIS-3">OASIS-3</option>
-    </select>
+<form action="/convertor3" method="post" enctype="multipart/form-data">
 
-    <br>
-    <br>
-
-    <label for="input-folder-1">Upload Dataset Folder</label>
-    <input id="input-folder-1" type="file" name="Dataset" webkitdirectory multiple required>
-    
-    <br>
-
-    <label for="input-folder-2">Upload Clinical Data Folder</label>    
-    <input id="input-folder-2" type="file" name="Clinical" webkitdirectory multiple required>
+    <label for="input-folder-2">Upload CAPS data folder</label>    
+    <input id="input-folder-2" type="file" name="CAPS" webkitdirectory multiple required>
 
     <br>
 
-    <button type="submit" class="btn btn-info"> Convert </button>
+    <button type="submit" class="btn btn-info"> Rotate </button>
 
 </form>
 

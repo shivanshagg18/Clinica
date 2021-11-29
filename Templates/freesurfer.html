@@ -41,8 +41,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/freesurfer">FreeSurfer</a></li>
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="/freesurfer">FreeSurfer</a></li>
         <li><a href="/rotate">Rotate</a></li>
         <li><a href="/nifti">Nifti</a></li>
       </ul>
@@ -51,26 +51,10 @@
 </nav>
 
 
-<form action="/convertor" method="post" enctype="multipart/form-data">
-    <select class="form-select" aria-label="Default select example" name="Type">
-        <option selected>Select Dataset</option>
-        <option value="ADNI">ADNI</option>
-        <option value="AIBL">AIBL</option>
-        <option value="NIFD">NIFD</option>
-        <option value="OASIS">OASIS</option>
-        <option value="OASIS-3">OASIS-3</option>
-    </select>
+<form action="/convertor2" method="post" enctype="multipart/form-data">
 
-    <br>
-    <br>
-
-    <label for="input-folder-1">Upload Dataset Folder</label>
-    <input id="input-folder-1" type="file" name="Dataset" webkitdirectory multiple required>
-    
-    <br>
-
-    <label for="input-folder-2">Upload Clinical Data Folder</label>    
-    <input id="input-folder-2" type="file" name="Clinical" webkitdirectory multiple required>
+    <label for="input-folder-2">Upload BIDS Data Folder</label>    
+    <input id="input-folder-2" type="file" name="BIDS" webkitdirectory multiple required>
 
     <br>
 
