@@ -10,6 +10,6 @@ for subj in ./CAPS/*/*/*/*/*/*/*/*.nii.gz
 
     do
         echo 'Working on ' ${subj}
-        echo  ${subj:0:-7}
-        flirt -in ${subj}  -ref MNI152_T1_2mm_brain.nii.gz  -out  ${subj:0:-7}_Registered.nii.gz
+        echo  ${subj:0:${#subj}-7}
+        flirt -in ${subj}  -ref MNI152_T1_2mm_brain.nii.gz  -out  ${subj:0:${#subj}-7}_Registered.nii.gz
     done
