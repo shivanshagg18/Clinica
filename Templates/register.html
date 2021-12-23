@@ -43,9 +43,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Home</a></li>
         <li><a href="/freesurfer">FreeSurfer</a></li>
-        <li class="active"><a href="/rotate">Rotate</a></li>
+        <li><a href="/rotate">Rotate</a></li>
         <li><a href="/nifti">Nifti</a></li>
-        <li><a href="/register">Register</a></li>
+        <li class="active"><a href="/register">Register</a></li>
         <li><a href="/train">Train</a></li>
       </ul>
     </div>
@@ -53,14 +53,14 @@
 </nav>
 
 
-<form action="/convertor3" method="post" enctype="multipart/form-data">
+<form action="/convertor5" method="post" enctype="multipart/form-data">
 
     <label for="input-folder-2">Upload CAPS data folder</label>    
     <input id="input-folder-2" type="file" name="CAPS" webkitdirectory multiple required>
 
     <br>
 
-    <button type="submit" class="btn btn-info"> Rotate </button>
+    <button type="submit" class="btn btn-info"> Register </button>
 
 </form>
 

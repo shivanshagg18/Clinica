@@ -43,24 +43,72 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Home</a></li>
         <li><a href="/freesurfer">FreeSurfer</a></li>
-        <li class="active"><a href="/rotate">Rotate</a></li>
+        <li><a href="/rotate">Rotate</a></li>
         <li><a href="/nifti">Nifti</a></li>
         <li><a href="/register">Register</a></li>
-        <li><a href="/train">Train</a></li>
+        <li class="active"><a href="/train">Train</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 
-<form action="/convertor3" method="post" enctype="multipart/form-data">
+<form action="/convertor6" method="post" enctype="multipart/form-data">
+
+    <label for="model">Model for training:</label>
+    <input id="model" type="text" name="model" value="ADNINetwork">
+
+    <br>
+    <br>
+
+    <label for="optimizer">Optimizer from Pytorch:</label>
+    <input id="optimizer" type="text" name="optimizer" value="sgd">
+
+    <br>
+    <br>
+
+    <label for="learning_rate">Learning rate for optimizer:</label>
+    <input id="learning_rate" type="number" step="0.0000001" name="learning_rate" value="0.001">
+
+    <br>
+    <br>
+
+    <label for="train_bs">Training batch size:</label>
+    <input id="train_bs" type="number" name="train_bs" value="2">
+
+    <br>
+    <br>
+
+    <label for="val_bs">Validation/Testing batch size:</label>
+    <input id="val_bs" type="number" name="val_bs" value="2">
+
+    <br>
+    <br>
+
+    <label for="train_epochs">Number of epochs to train for:</label>
+    <input id="train_epochs" type="number" name="train_epochs" value="10">
+
+    <br>
+    <br>
+
+    <label for="split_ratio">Ratio to split dataset between training and testing:</label>
+    <input id="split_ratio" type="number" step="0.0000001" name="split_ratio" value="0.8">
+
+    <br>
+    <br>
+
+    <label for="num_workers">Number of workers for dataloading:</label>
+    <input id="num_workers" type="number" name="num_workers" value="0">
+
+    <br>
+    <br>
 
     <label for="input-folder-2">Upload CAPS data folder</label>    
     <input id="input-folder-2" type="file" name="CAPS" webkitdirectory multiple required>
 
     <br>
 
-    <button type="submit" class="btn btn-info"> Rotate </button>
+    <button type="submit" class="btn btn-info"> Train </button>
 
 </form>
 
